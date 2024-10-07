@@ -1,0 +1,902 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100vh;
+
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scroll-behavior: auto;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: #151515;
+}
+
+#Netflix {
+    height: 100%;
+    max-width: 1920px;
+    width: 100%;
+    min-width: 320px;
+}
+
+#Netflix #LandArea-Background {
+    height: calc(97vh + 40px);
+
+    background: url(https://stige-netflix-wheat.vercel.app/bd2.jpg) no-repeat scroll center;
+    background-size: cover;
+}
+
+#LandArea-Background #LandingPage {
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0 50px 50px rgba(0, 0, 0, 1), inset 0 0 50px rgba(0, 0, 0, 0.7);
+}
+
+#LandingPage #header {
+    height: 15%;
+    padding: 0 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header img {
+    height: 40px;
+}
+
+#header #Sign {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header #Sign select {
+    width: 125px;
+    padding: 5px;
+
+    font-size: 1.1em;
+    color: #fff;
+
+    background-color: transparent;
+
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+#Sign select option {
+    color: black;
+}
+
+#header #Sign button {
+    margin-left: 15px;
+    padding: 8px 16px;
+
+    font-size: 0.9em;
+    color: #fff;
+
+    background-color: rgb(225, 0, 0);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.15s;
+}
+
+#header #Sign button:hover {
+    background-color: rgb(190, 0, 0);
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+#LandingPage #Intro {
+    height: 85%;
+
+    color: #fff;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Intro #Intro-Box {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#Intro-Box h1 {
+    margin-bottom: 10px;
+    font-size: 4.35em;
+}
+
+#Intro-Box p {
+    color: rgb(230, 230, 230);
+    font-size: 1.3em;
+}
+
+#Intro-Box :nth-child(3) {
+    margin: 40px 0 10px 0;
+    font-size: 1em;
+}
+
+#Intro-Box #EmailArea {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#EmailArea #Input {
+    width: 65%;
+    position: relative;
+}
+
+#Input input[type="email"] {
+    width: 100%;
+    color: #fff;
+    font-size: 1em;
+    padding: 30px 15px 10px 15px;
+
+    background-color: rgba(40, 40, 40, 0.25);
+    backdrop-filter: blur(2px);
+
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+#Input label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+
+    color: lightgray;
+    transition: top 0.3s ease-in-out, left 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#EmailArea button {
+    color: #fff;
+    font-size: 1.15em;
+    padding: 20px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(225, 0, 0);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.15s;
+}
+
+#EmailArea button:hover {
+    background-color: rgb(190, 0, 0);
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+#Input input:focus+label,
+#Input input:valid+label {
+    top: 7px;
+    left: 3px;
+    transform: translateY(0) scale(0.75);
+
+    transition: all 0.3s ease-in-out;
+}
+
+#Netflix #RestArea {
+    color: #fff;
+    margin-top: -40px;
+    padding: 30px 150px;
+
+    background-image: radial-gradient(60% 3% at center top, #000457 0%, black 100%);
+    border-top: 4px solid rgb(195, 0, 0);
+    border-radius: 50% 50% 0% 0% / 40px 40px 0% 0%;
+}
+
+#RestArea #Trending {
+    font-size: 1.5em;
+    margin: 50px 0;
+}
+
+#Trending #Filter {
+    width: 100%;
+    margin: 10px 0;
+}
+
+#Filter select {
+    width: 90px;
+    margin: 5px 15px 5px 0;
+    padding: 8px;
+
+    color: #fff;
+    font-size: 0.75em;
+
+    background-color: rgba(40, 40, 40, 0.5);
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+#Filter select option {
+    color: #000;
+    background-color: #fff;
+}
+
+#Trending #Gallery {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#Gallery #LeftScroll,
+#Gallery #RightScroll {
+    height: 120px;
+    padding: 0 2px;
+    margin: 0 10px;
+
+    color: lightgray;
+    font-size: 1.25em;
+
+    background-color: #222;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.15s;
+}
+
+#Gallery #LeftScroll:hover,
+#Gallery #RightScroll:hover {
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+#Gallery #Collection {
+    padding: 5px;
+
+    display: grid;
+    grid-template-columns: repeat(9, auto);
+    column-gap: 30px;
+
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+#Collection .Movie {
+    height: 300px;
+    width: 220px;
+}
+
+.Movie img {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+}
+
+.Movie img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#RestArea #More {
+    margin-bottom: 70px;
+    font-size: 1.25em;
+}
+
+#More #Reason {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#Reason .Reasons {
+    height: 250px;
+    width: 25%;
+
+    color: #dddddd;
+    font-size: 0.8em;
+    padding: 25px 20px;
+    margin: 15px 10px;
+
+    background: rgb(14, 5, 48);
+    background: linear-gradient(146deg, rgba(14, 5, 48, 1) 0%, rgba(44, 17, 57, 1) 59%);
+    border: none;
+    border-radius: 30px;
+}
+
+.Reasons h2 {
+    margin-bottom: 15px;
+}
+
+.Reasons p {
+    color: #b0b0b0
+}
+
+#RestArea #FAQ {
+    margin-bottom: 70px;
+    font-size: 1.2em;
+}
+
+#FAQ .FAQ {
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 1.3em;
+}
+
+#FAQ .FAQ:first-child {
+    margin-top: 20px;
+}
+
+.FAQ .Question {
+    padding: 25px 20px;
+    margin-bottom: 2px;
+    position: relative;
+
+    background-color: #333;
+    transition: background-color 0.15s;
+}
+
+.FAQ .Question:hover {
+    background-color: #454545;
+    transition: background-color 0.15s;
+}
+
+.Question .Plus {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%) rotate(0);
+
+    font-size: 2em;
+}
+
+.Rotate {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%) rotate(45deg);
+
+    font-size: 2em;
+}
+
+.FAQ .Answer {
+    padding: 30px 25px;
+    background-color: #333;
+    display: none;
+}
+
+.Block {
+    padding: 25px 20px;
+    background-color: #333;
+    display: block;
+}
+
+#RestArea #Article {
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#Article #EmailArea-Two {
+    width: 75%;
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#EmailArea-Two #Input-Two {
+    width: 65%;
+    position: relative;
+}
+
+#Input-Two input {
+    font-size: 1em;
+    color: #fff;
+
+    width: 100%;
+    margin-right: 20px;
+    padding: 30px 15px 10px 15px;
+
+    background-color: rgba(255, 255, 255, 0.075);
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+#Input-Two label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    transition: top 0.3s ease, Left 0.3s ease, transform 0.3s ease;
+}
+
+#EmailArea-Two button {
+    color: #fff;
+    font-size: 1.25em;
+    padding: 20px 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(225, 0, 0);
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.15s;
+}
+
+#EmailArea-Two button:hover {
+    background-color: rgb(190, 0, 0);
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+#Input-Two input:focus+label,
+#Input-Two input:valid+label {
+    top: 7px;
+    left: 0px;
+    transform: translateY(0) scale(0.6);
+    transition: all 0.3s ease;
+}
+
+footer {
+    color: darkgray;
+    padding: 0 10px;
+    margin-bottom: 100px;
+}
+
+footer #Tel {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+footer #Links {
+    margin: 20px 0;
+    display: flex;
+}
+
+#Links ul {
+    width: 50%;
+    text-decoration: underline;
+}
+
+ul li {
+    font-size: 0.9em;
+    list-style: none;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+footer select {
+    color: #fff;
+    font-size: 1em;
+    width: 120px;
+    padding: 5px;
+
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+footer select option {
+    color: #000;
+}
+
+footer p {
+    margin-top: 30px;
+}
+
+@media (max-width:1280px) {
+    #Netflix #LandArea-Background {
+        height: calc(100vh + 40px);
+    }
+
+    #LandingPage #header {
+        height: 15%;
+        padding: 0 70px;
+    }
+
+    #header img {
+        height: 40px;
+    }
+
+    #LandingPage #Intro {
+        height: 85%;
+    }
+
+    #Intro #Intro-Box {
+        width: 580px;
+    }
+
+    #Intro-Box h1 {
+        margin-bottom: 10px;
+        font-size: 2.75em;
+    }
+
+    #Intro-Box p {
+        font-size: 1em;
+    }
+
+    #Intro-Box :nth-child(3) {
+        margin: 25px 0 10px 0;
+        font-size: 1em;
+    }
+
+    #Netflix #RestArea {
+        margin-top: -40px;
+        padding: 30px 75px;
+    }
+
+    #RestArea #Trending {
+        font-size: 1.5em;
+        margin: 50px 0;
+    }
+
+    #Filter select {
+        width: 90px;
+        margin: 5px 15px 5px 0;
+        padding: 8px;
+    }
+
+    #Gallery #Collection {
+        padding: 5px;
+        column-gap: 40px;
+    }
+
+    #Collection .Movie {
+        height: 250px;
+        width: 190px;
+    }
+
+    #RestArea #More {
+        margin-bottom: 70px;
+        font-size: 1.25em;
+    }
+
+    #More #Reason {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-gap: 15px;
+    }
+
+    #Reason .Reasons {
+        height: 200px;
+        width: 100%;
+        margin: 0;
+        font-size: 0.8em;
+        padding: 25px 20px;
+    }
+
+    .Reasons h2 {
+        margin-bottom: 15px;
+    }
+
+    #RestArea #FAQ {
+        margin-bottom: 70px;
+        font-size: 1.2em;
+    }
+
+    #FAQ .FAQ {
+        margin: 10px 0;
+        cursor: pointer;
+        font-size: 1.3em;
+    }
+
+    #FAQ .FAQ:first-child {
+        margin-top: 20px;
+    }
+
+    #Article #EmailArea-Two {
+        width: 70%;
+        margin-top: 20px;
+    }
+
+    #EmailArea-Two #Input-Two {
+        width: 55%;
+        position: relative;
+    }
+
+    #EmailArea-Two button {
+        font-size: 1.25em;
+        padding: 20px 50px;
+    }
+}
+
+@media (max-width:960px) {
+    #Netflix #LandArea-Background {
+        height: calc(85vh + 40px);
+    }
+
+    #LandingPage #header {
+        height: 10%;
+        padding: 0 30px;
+    }
+
+    #header img {
+        height: 25px;
+    }
+
+    #LandingPage #Intro {
+        height: 90%;
+    }
+
+    #Intro #Intro-Box {
+        width: 470px;
+    }
+
+    #Intro-Box h1 {
+        margin-bottom: 10px;
+        font-size: 2.2em;
+    }
+
+    #Intro-Box p {
+        font-size: 0.9em;
+    }
+
+    #Intro-Box :nth-child(3) {
+        margin: 20px 0 10px 0;
+        font-size: 0.9em;
+    }
+
+    #EmailArea #Input {
+        width: 60%;
+        position: relative;
+    }
+
+    #EmailArea button {
+        font-size: 1em;
+        padding: 20px 30px;
+    }
+
+    #Netflix #RestArea {
+        margin-top: -40px;
+        padding: 30px;
+    }
+
+    #RestArea #Trending {
+        font-size: 1.25em;
+        margin: 50px 0;
+    }
+
+    #Filter select {
+        width: 100%;
+        margin: 5px 0;
+        padding: 8px;
+    }
+
+    #Gallery #Collection {
+        padding: 5px;
+        column-gap: 15px;
+    }
+
+    #Collection .Movie {
+        height: 170px;
+        width: 120px;
+    }
+
+    #RestArea #More {
+        margin-bottom: 70px;
+        font-size: 1.1em;
+    }
+
+    #More #Reason {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #Reason .Reasons {
+        height: 200px;
+        width: 100%;
+        margin-bottom: 5px;
+        font-size: 0.8em;
+        padding: 25px 20px;
+    }
+
+    .Reasons h2 {
+        margin-bottom: 15px;
+    }
+
+    #RestArea #FAQ {
+        margin-bottom: 70px;
+        font-size: 1.2em;
+    }
+
+    #FAQ .FAQ {
+        margin: 10px 0;
+        cursor: pointer;
+        font-size: 1em;
+    }
+
+    #Article #EmailArea-Two {
+        width: 100%;
+        margin-top: 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    #EmailArea-Two #Input-Two {
+        width: 60%;
+        position: relative;
+    }
+
+    #EmailArea-Two button {
+        font-size: 1.25em;
+        padding: 20px 37px;
+    }
+}
+
+@media (max-width:600px) {
+    #LandingPage #header {
+        height: 15%;
+        padding: 0 30px;
+    }
+
+    #header img {
+        height: 25px;
+    }
+
+    #header #Sign select {
+        width: 100px;
+        padding: 5px;
+        font-size: 1em;
+    }
+
+    #LandingPage #Intro {
+        height: 85%;
+    }
+
+    #Intro #Intro-Box {
+        width: 88%;
+    }
+
+    #Intro-Box h1 {
+        margin-bottom: 10px;
+        font-size: 2.1em;
+    }
+
+    #Intro-Box p {
+        font-size: 1em;
+    }
+
+    #Intro-Box :nth-child(3) {
+        margin: 20px 0 15px 0;
+        font-size: 1em;
+    }
+
+    #Intro-Box #EmailArea {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #EmailArea #Input {
+        width: 100%;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    #EmailArea button {
+        font-size: 1em;
+        padding: 15px 25px;
+    }
+
+    #Netflix #RestArea {
+        margin-top: -40px;
+        padding: 10px 30px;
+    }
+
+    #RestArea #Trending {
+        font-size: 1em;
+        margin: 50px 0;
+    }
+
+    #Filter select {
+        width: 100%;
+        margin: 5px 0;
+        padding: 8px;
+    }
+
+    #Gallery #Collection {
+        padding: 5px;
+        column-gap: 15px;
+    }
+
+    #Collection .Movie {
+        height: 170px;
+        width: 120px;
+    }
+
+    #RestArea #More {
+        margin-bottom: 70px;
+        font-size: 1.1em;
+    }
+
+    #More #Reason {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #Reason .Reasons {
+        height: 200px;
+        width: 100%;
+        margin-bottom: 5px;
+        font-size: 0.8em;
+        padding: 25px 20px;
+    }
+
+    .Reasons h2 {
+        margin-bottom: 15px;
+    }
+
+    #RestArea #FAQ {
+        margin-bottom: 70px;
+        font-size: 1.2em;
+    }
+
+    #FAQ .FAQ {
+        margin: 10px 0;
+        cursor: pointer;
+        font-size: 0.85em;
+    }
+
+    #Article #EmailArea-Two {
+        width: 100%;
+        margin-top: 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    #EmailArea-Two #Input-Two {
+        width: 100%;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    #EmailArea-Two button {
+        font-size: 1em;
+        padding: 15px 30px;
+        border-radius: 5px;
+    }
+
+    footer #Links {
+        margin: 20px 0 50px 0;
+        display: block;
+    }
+}
+
+@media (max-width:370px) {
+
+    #header #Sign select {
+        width: 50px;
+    }
+}
