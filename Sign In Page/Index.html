@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="https://cdn.icon-icons.com/icons2/2699/PNG/512/netflix_logo_icon_170919.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Netflix</title>
+</head>
+
+<body>
+    <div id="Netflix">
+
+        <div id="BGImg">
+
+            <main>
+
+                <div id="header">
+                    <img src="https://stige-netflix-wheat.vercel.app/logo.png">
+                </div>
+
+                <div id="container">
+
+                    <div id="SignBox">
+
+                        <h1>Sign In</h1>
+
+                        <div class="InputArea">
+                            <input type="email" id="EmailField" required><label>Email address</label>
+                        </div>
+                        <div class="Invalid"><i class='bx bx-x-circle'></i>Please enter a valid email address</div>
+
+                        <div class="InputArea">
+                            <input type="password" id="PasswordField" required min="4" max="60"><label>Password</label>
+                        </div>
+                        <div class="Invalid"><i class='bx bx-x-circle'></i>Your password must contain between 4 and 60
+                            characters.
+                        </div>
+
+                        <div id="Options">
+                            <button onclick="SignIn()">Sign In</button>
+                            OR
+                            <button>Use a sign-in code</button>
+                            <a href="#">Forgot password?</a>
+                        </div>
+
+                        <div id="EndArea">
+                            <div id="Checkbox">
+                                <input type="checkbox" id="check"><label for="check">Remember me</label>
+                            </div>
+
+                            <div id="SignUp">
+                                New to Netflix? <a href="#">Sign up now.</a>
+                            </div>
+
+                            <p id="Captcha">
+                                This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#">Learn
+                                    more.</a>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </main>
+
+        </div>
+
+        <footer>
+
+            <div id="Ques">
+                Question? Call <span id="Tel">000-800-919-1694</span>
+            </div>
+
+            <div id="Links">
+
+                <ul>
+                    <li>FAQ</li>
+                    <li>Terms of Use</li>
+                    <li>Cookie Preference</li>
+                </ul>
+
+                <ul>
+                    <li>Help Centre</li>
+                    <li>Privacy</li>
+                    <li>Corporate Information</li>
+                </ul>
+
+            </div>
+
+            <select>
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+            </select>
+
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
